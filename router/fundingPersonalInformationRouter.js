@@ -1,0 +1,6 @@
+const express=require('express')
+const fundingPersonalInformationRouter=express.Router()
+const fundingPersonalInformationController=require('../controller/fundingPersonalInformationController')
+fundingPersonalInformationRouter.post('/fundingPersonalInformation',fundingPersonalInformationController.postFundingPersonalInformation)
+
+module.exports =fundingPersonalInformationRouter

@@ -1,0 +1,6 @@
+const express=require('express')
+const fundingCompanyInformationRouter=express.Router()
+const fundingCompanyInformationController=require('../controller/fundingCompanyInformationController')
+fundingCompanyInformationRouter.post('/fundingCompanyInformation',fundingCompanyInformationController.postFundingCompanyInformation)
+
+module.exports =fundingCompanyInformationRouter
