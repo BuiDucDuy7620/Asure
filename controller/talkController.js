@@ -1,6 +1,6 @@
 const talkModel = require('../model/talkModel.js')
 const { talkValidate } = require('../middleware/validate.js')
-const excelJS=require('excelJS')
+const excelJS=require('exceljs')
 
 const ejs = require('ejs')
 const pdf = require('html-pdf')
