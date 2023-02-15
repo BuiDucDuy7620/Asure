@@ -16,7 +16,7 @@ class chatController {
 
     getChatById = (req, res) => {
         ChatModel.find({ _id: req.params.id })
-            // .populate("RoomChat")
+            // .populate("roomChat")
             .exec((err, Chat) => {
                 if (err) {
                     res.send(err);

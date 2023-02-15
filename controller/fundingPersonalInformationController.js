@@ -15,5 +15,23 @@ class fundingPersonalInformationController {
             }
         })
     }
+    getAllPersonInformation = async(req, res) => {
+        fundingPersonalInformationModel.find({}).exec((error, value) => {
+            if (error) {
+                res.send(error)
+            } else {
+                res.json(value)
+            }
+        })
+    }
+    getPersonInformationById = (req, res) => {
+        fundingPersonalInformationModel.find({ _id: req.params.id }).exec((err, value) => {
+            if (err) {
+                res.send('khong the lay thong tin ')
+            } else {
+                res.json(value)
+            }
+        })
+    }
 }
 module.exports =new fundingPersonalInformationController()

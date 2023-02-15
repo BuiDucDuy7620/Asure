@@ -42,5 +42,23 @@ class fundingCompanyInformationController {
             }
         })
     }
+    getAllFundingCompanyInformation = async(req, res) => {
+        fundingCompanyInformationModel.find({}).exec((error, value) => {
+            if (error) {
+                res.send(error)
+            } else {
+                res.json(value)
+            }
+        })
+    }
+    getFundingCompanyInformationById = (req, res) => {
+        fundingCompanyInformationModel.find({ _id: req.params.id }).exec((err, FundingCompanyInformation) => {
+            if (err) {
+                res.send('khong the lay thong tin FundingCompanyInformation')
+            } else {
+                res.json(FundingCompanyInformation)
+            }
+        })
+    }
 }
 module.exports = new fundingCompanyInformationController()
