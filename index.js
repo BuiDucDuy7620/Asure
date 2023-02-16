@@ -26,6 +26,7 @@ app.use(
 //     next();
 //   });
 app.use(cors())
+app.options('*',cors())
 
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
