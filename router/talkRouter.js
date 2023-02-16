@@ -5,8 +5,8 @@ talkRouter.post('/about-us',talkController.postTalk)
 
 talkRouter.get('/getAllTalk',talkController.getAllTalk)
 talkRouter.get('/getTalkById/:id',talkController.getTalkById)
-talkRouter.get('/exportTalkById/:id',talkController.exportTalkById)
-talkRouter.get('/exportAllTalk',talkController.exportAllTalk)
+talkRouter.get('/exportExcelTalkById/:id',talkController.exportTalkById)
+talkRouter.get('/exportExcelAllTalk',talkController.exportAllTalk)
 
 talkRouter.get('/exportPDFListTalk',talkController.exportPDFListTalk)
 
